@@ -1,0 +1,129 @@
+// ==========================================
+// HEADER
+// ==========================================
+
+.header {
+  background: $color-dark;
+  color: $color-light;
+  padding: $spacing-md $spacing-lg;
+  @include gradient-dark;
+  box-shadow: $shadow-md;
+  position: sticky;
+  top: 0;
+  z-index: $z-header;
+
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    @include flex-between;
+    gap: $spacing-md;
+  }
+
+  &__menu-toggle {
+    @include button-reset;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: $spacing-sm;
+    align-items: center;
+    justify-content: center;
+
+    @include media-desktop {
+      display: none;
+    }
+  }
+
+  &__menu-line {
+    width: 25px;
+    height: 3px;
+    background-color: $color-light;
+    border-radius: 2px;
+    @include transition(all, $transition-fast);
+  }
+
+  &__logo-container {
+    flex: 1;
+    margin: 0 $spacing-lg;
+
+    @include media-tablet {
+      margin: 0 $spacing-md;
+    }
+  }
+
+  &__logo {
+    font-size: $font-size-xl;
+    font-weight: $font-weight-bold;
+    margin: 0;
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+
+    @include media-tablet {
+      display: none;
+    }
+  }
+
+  &__nav-list {
+    display: flex;
+    gap: $spacing-lg;
+    list-style: none;
+  }
+
+  &__nav-item {
+    position: relative;
+  }
+
+  &__nav-link {
+    color: $color-light;
+    font-weight: $font-weight-medium;
+    padding: $spacing-xs $spacing-sm;
+    border-radius: $border-radius-full;
+    @include transition(background-color, $transition-normal);
+
+    &:hover {
+      background-color: rgba($color-light, 0.16);
+      color: $color-light;
+    }
+  }
+
+  &__cart-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  &__cart-btn {
+    @include button-reset;
+    position: relative;
+    padding: $spacing-sm;
+    color: $color-light;
+    @include flex-center;
+    font-size: 1.5rem;
+    @include transition(transform, $transition-normal);
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  &__cart-icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  &__cart-badge {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    @include gradient-primary;
+    color: $color-light;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    @include flex-center;
+    font-size: 0.75rem;
+    font-weight: $font-weight-bold;
+  }
+}

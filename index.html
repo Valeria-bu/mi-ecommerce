@@ -9,6 +9,11 @@
 </head>
 <body>
     <header>
+        <button id="menuBtn" class="menu-toggle" aria-label="Abrir menú">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
         <div class="logo">
             <h1>Tienda Online</h1>
         </div>
@@ -16,12 +21,45 @@
             <ul>
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="productos.html">Productos</a></li>
-                <li><a href="carrito.html">Carrito</a></li>
                 <li><a href="#contacto">Contacto</a></li>
                 <li><a href="#beneficios">Beneficios</a></li>
             </ul>
         </nav>
+        <div class="cart-icon-container">
+            <button id="cartBtn" class="cart-icon" aria-label="Ver carrito">
+                🛒
+                <span id="cart-count" class="cart-badge">0</span>
+            </button>
+        </div>
     </header>
+
+    <!-- Menú Lateral -->
+    <aside id="sideMenu" class="side-menu">
+        <button id="closeMenu" class="close-btn" aria-label="Cerrar menú">✕</button>
+        <nav class="side-nav">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#beneficios">Beneficios</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Modal del Carrito -->
+    <div id="cartModal" class="cart-modal">
+        <div class="cart-modal-content">
+            <button class="cart-modal-close">&times;</button>
+            <h2>Carrito de Compras</h2>
+            <div id="cartItems" class="cart-items"></div>
+            <div id="cartEmpty" class="cart-empty">El carrito está vacío</div>
+            <div id="cartTotal" class="cart-total">
+                <strong>Total: $0.00</strong>
+            </div>
+            <button id="clearCartBtn" class="btn-clear-cart">Vaciar Carrito</button>
+        </div>
+    </div>
+
     <main>
         <section class="hero">
             <span class="eyebrow">Belleza y cuidado diario</span>
@@ -78,7 +116,7 @@
         <a id="contacto">Contáctanos</a>
     </footer>
     <p>Actualización final para práctica de GitHub</p>
-    <script src="js/scripts.js"></script>
+    <script src="JavaScript/scripts.js"></script>
 </body>
 </html>
 

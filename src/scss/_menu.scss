@@ -1,0 +1,82 @@
+// ==========================================
+// SIDE MENU
+// ==========================================
+
+.side-menu {
+  position: fixed;
+  left: -280px;
+  top: 0;
+  width: 280px;
+  height: 100vh;
+  @include gradient-dark;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+  @include transition(left, $transition-normal);
+  z-index: $z-menu;
+  overflow-y: auto;
+  padding-top: $spacing-lg;
+
+  &.active {
+    left: 0;
+  }
+
+  &__close {
+    @include button-reset;
+    position: absolute;
+    top: $spacing-lg;
+    right: $spacing-lg;
+    color: $color-light;
+    font-size: 1.5rem;
+    padding: $spacing-sm;
+    @include transition(color, $transition-normal);
+
+    &:hover {
+      color: $color-secondary;
+    }
+  }
+
+  &__nav {
+    margin-top: $spacing-lg;
+  }
+
+  &__nav-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    list-style: none;
+  }
+
+  &__nav-item {
+    border-bottom: 1px solid rgba($color-light, 0.1);
+  }
+
+  &__nav-link {
+    display: block;
+    color: $color-light;
+    padding: $spacing-lg $spacing-lg;
+    font-weight: $font-weight-medium;
+    @include transition(background-color, $transition-normal);
+
+    &:hover {
+      background-color: rgba($color-light, 0.1);
+    }
+  }
+}
+
+// Overlay para cerrar menu
+.side-menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  @include transition(opacity, $transition-normal);
+  z-index: $z-menu - 1;
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+  }
+}

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tienda online de belleza y cuidado personal. Descubre productos de alta calidad con envío rápido y garantía.">
+    <meta name="keywords" content="belleza, cosméticos, cuidado personal, tienda online">
+    <meta name="author" content="Tienda Online">
+    <title>Tienda Online - Belleza y Cuidado Personal</title>
+    <link rel="stylesheet" href="../dist/css/main.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" role="banner">
+        <div class="header__container">
+            <button id="menuBtn" class="header__menu-toggle" aria-label="Abrir menú" aria-expanded="false">
+                <span class="header__menu-line"></span>
+                <span class="header__menu-line"></span>
+                <span class="header__menu-line"></span>
+            </button>
+
+            <div class="header__logo-container">
+                <h1 class="header__logo">Tienda Online</h1>
+            </div>
+
+            <nav class="header__nav" role="navigation" aria-label="Navegación principal">
+                <ul class="header__nav-list">
+                    <li class="header__nav-item"><a href="#inicio" class="header__nav-link">Inicio</a></li>
+                    <li class="header__nav-item"><a href="#productos" class="header__nav-link">Productos</a></li>
+                    <li class="header__nav-item"><a href="#beneficios" class="header__nav-link">Beneficios</a></li>
+                    <li class="header__nav-item"><a href="#contacto" class="header__nav-link">Contacto</a></li>
+                </ul>
+            </nav>
+
+            <div class="header__cart-container">
+                <button id="cartBtn" class="header__cart-btn" aria-label="Ver carrito">
+                    <svg class="header__cart-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="9" cy="21" r="1"></circle>
+                        <circle cx="20" cy="21" r="1"></circle>
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                    </svg>
+                    <span id="cart-count" class="header__cart-badge" aria-label="Número de productos en el carrito">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Side Menu -->
+    <aside id="sideMenu" class="side-menu" role="complementary" aria-label="Menú lateral">
+        <button id="closeMenu" class="side-menu__close" aria-label="Cerrar menú">✕</button>
+        <nav class="side-menu__nav" role="navigation">
+            <ul class="side-menu__nav-list">
+                <li class="side-menu__nav-item"><a href="#inicio" class="side-menu__nav-link">Inicio</a></li>
+                <li class="side-menu__nav-item"><a href="#productos" class="side-menu__nav-link">Productos</a></li>
+                <li class="side-menu__nav-item"><a href="#beneficios" class="side-menu__nav-link">Beneficios</a></li>
+                <li class="side-menu__nav-item"><a href="#contacto" class="side-menu__nav-link">Contacto</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Cart Modal -->
+    <div id="cartModal" class="modal" role="dialog" aria-labelledby="cartModalTitle" aria-hidden="true">
+        <div class="modal__content">
+            <button class="modal__close" aria-label="Cerrar carrito">×</button>
+            <h2 id="cartModalTitle" class="modal__title">Carrito de Compras</h2>
+            <div id="cartItems" class="modal__items"></div>
+            <div id="cartEmpty" class="modal__empty">El carrito está vacío</div>
+            <div id="cartTotal" class="modal__total">
+                <strong>Total: $0.00</strong>
+            </div>
+            <button id="clearCartBtn" class="modal__btn-clear">Vaciar Carrito</button>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main role="main">
+        <!-- Hero Section -->
+        <section id="inicio" class="hero" aria-labelledby="heroTitle">
+            <div class="hero__content">
+                <p class="hero__eyebrow">Belleza y cuidado diario</p>
+                <h2 id="heroTitle" class="hero__title">Descubre productos que realzan tu estilo</h2>
+                <h3 class="hero__subtitle">Bienvenidos a nuestra tienda online</h3>
+                <p class="hero__description">Ofrecemos una selección cuidada de cosméticos y cuidado personal con resultados visibles y acabados irresistibles.</p>
+                <a href="#productos" class="hero__btn">Explorar Productos</a>
+            </div>
+        </section>
+
+        <!-- Benefits Section -->
+        <section id="beneficios" class="benefits" aria-labelledby="benefitsTitle">
+            <h2 id="benefitsTitle" class="sr-only">Nuestros Beneficios</h2>
+            <div class="benefits__container">
+                <article class="benefits__card">
+                    <h3 class="benefits__card-title">Envío rápido</h3>
+                    <p class="benefits__card-text">Recibe tus productos en pocos días con entrega segura.</p>
+                </article>
+                <article class="benefits__card">
+                    <h3 class="benefits__card-title">Calidad garantizada</h3>
+                    <p class="benefits__card-text">Elegimos marcas que cuidan cada detalle y fórmula.</p>
+                </article>
+                <article class="benefits__card">
+                    <h3 class="benefits__card-title">Atención cercana</h3>
+                    <p class="benefits__card-text">Estamos listos para ayudarte a encontrar lo que buscas.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section id="productos" class="products" aria-labelledby="productsTitle">
+            <div class="products__header">
+                <h2 id="productsTitle" class="products__title">Productos Destacados</h2>
+                <p class="products__subtitle">Lo más querido por nuestras clientas</p>
+            </div>
+            <div class="products__container">
+                <article class="product-card">
+                    <figure class="product-card__figure">
+                        <img src="../src/assets/img/base-liquida.jpg" alt="Base Líquida - cobertura media" class="product-card__image" width="200" height="200">
+                        <figcaption class="sr-only">Base Líquida</figcaption>
+                    </figure>
+                    <div class="product-card__content">
+                        <h3 class="product-card__title">Base Líquida</h3>
+                        <p class="product-card__description">Acabado natural y cobertura suave para un look impecable todo el día.</p>
+                        <h4 class="product-card__price">$28.99</h4>
+                        <button class="product-card__btn add-cart" aria-label="Agregar Base Líquida al carrito">Agregar al carrito</button>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <figure class="product-card__figure">
+                        <img src="../src/assets/img/labial-mate.jpg" alt="Labial Mate - color intenso" class="product-card__image" width="200" height="200">
+                        <figcaption class="sr-only">Labial Mate</figcaption>
+                    </figure>
+                    <div class="product-card__content">
+                        <h3 class="product-card__title">Labial Mate</h3>
+                        <p class="product-card__description">Color intenso y larga duración con un acabado elegante y sofisticado.</p>
+                        <h4 class="product-card__price">$15.99</h4>
+                        <button class="product-card__btn add-cart" aria-label="Agregar Labial Mate al carrito">Agregar al carrito</button>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <figure class="product-card__figure">
+                        <img src="../src/assets/img/crema-facial.jpg" alt="Crema Facial - hidratación profunda" class="product-card__image" width="200" height="200">
+                        <figcaption class="sr-only">Crema Facial</figcaption>
+                    </figure>
+                    <div class="product-card__content">
+                        <h3 class="product-card__title">Crema Facial</h3>
+                        <p class="product-card__description">Hidratación profunda y piel luminosa con una fórmula nutritiva.</p>
+                        <h4 class="product-card__price">$32.50</h4>
+                        <button class="product-card__btn add-cart" aria-label="Agregar Crema Facial al carrito">Agregar al carrito</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta" aria-labelledby="ctaTitle">
+            <div class="cta__container">
+                <h2 id="ctaTitle" class="cta__title">¿Listos para transformar tu rutina de belleza?</h2>
+                <p class="cta__text">Nuestros productos están diseñados para ti</p>
+                <a href="#productos" class="cta__btn">Comprar Ahora</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="footer__container">
+            <div class="footer__section">
+                <h3 class="footer__title">Tienda Online</h3>
+                <p class="footer__text">Tu destino para belleza y cuidado personal de calidad.</p>
+            </div>
+            <div class="footer__section">
+                <h3 class="footer__title">Información</h3>
+                <ul class="footer__list">
+                    <li><a href="#inicio" class="footer__link">Inicio</a></li>
+                    <li><a href="#productos" class="footer__link">Productos</a></li>
+                    <li><a href="#beneficios" class="footer__link">Beneficios</a></li>
+                </ul>
+            </div>
+            <div class="footer__section">
+                <h3 class="footer__title">Contacto</h3>
+                <address class="footer__address">
+                    <p class="footer__text">Email: <a href="mailto:info@tienda.com" class="footer__link">info@tienda.com</a></p>
+                    <p class="footer__text">Teléfono: <a href="tel:+1234567890" class="footer__link">+1 (234) 567-890</a></p>
+                </address>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <p class="footer__copyright">&copy; 2026 Tienda Online. Todos los derechos reservados.</p>
+            <p class="footer__social">Síguenos en redes sociales para ofertas exclusivas.</p>
+        </div>
+    </footer>
+
+    <!-- Skip to main content link -->
+    <a href="#inicio" class="sr-only sr-only--focusable">Saltar al contenido principal</a>
+
+    <!-- Scripts -->
+    <script src="../dist/js/main.js" defer></script>
+</body>
+</html>

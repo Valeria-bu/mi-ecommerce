@@ -1,0 +1,22 @@
+// ==========================================
+// MAIN SCSS - IMPORT ALL
+// ==========================================
+
+// 1. Configuration & Variables
+@import 'variables';
+@import 'mixins';
+
+// 2. Base Styles
+@import 'base';
+
+// 3. Components
+@import 'header';
+@import 'menu';
+@import 'modal';
+
+// 4. Sections
+@import 'hero';
+@import 'benefits';
+@import 'products';
+@import 'cta';
+@import 'footer';

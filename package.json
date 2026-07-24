@@ -1,0 +1,27 @@
+{
+  "name": "ecommerce-belleza",
+  "version": "1.0.0",
+  "description": "Tienda online de belleza y cuidado personal - Proyecto profesional con HTML5, SCSS y JavaScript",
+  "main": "src/js/main.js",
+  "scripts": {
+    "sass": "sass --watch src/scss:dist/css",
+    "sass:build": "sass --no-source-map src/scss:dist/css",
+    "start": "npm run sass",
+    "build": "npm run sass:build",
+    "serve": "npx http-server . -p 8000 -c-1"
+  },
+  "keywords": [
+    "ecommerce",
+    "belleza",
+    "cosméticos",
+    "html5",
+    "scss",
+    "javascript",
+    "responsive"
+  ],
+  "author": "Tu Nombre",
+  "license": "MIT",
+  "devDependencies": {
+    "sass": "^1.101.7"
+  }
+}

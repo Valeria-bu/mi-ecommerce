@@ -1,0 +1,57 @@
+// ==========================================
+// CTA SECTION
+// ==========================================
+
+.cta {
+  background: linear-gradient(135deg, $color-primary 0%, $color-primary-light 100%);
+  color: $color-light;
+  padding: $spacing-3xl $spacing-lg;
+  text-align: center;
+
+  @include media-tablet {
+    padding: $spacing-2xl $spacing-lg;
+  }
+
+  &__container {
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-lg;
+  }
+
+  &__title {
+    font-size: $font-size-2xl;
+    margin: 0;
+    font-weight: $font-weight-bold;
+
+    @include media-tablet {
+      font-size: 1.5rem;
+    }
+  }
+
+  &__text {
+    font-size: $font-size-lg;
+    margin: 0;
+    opacity: 0.95;
+  }
+
+  &__btn {
+    display: inline-block;
+    padding: $spacing-md $spacing-xl;
+    background: $color-light;
+    color: $color-primary;
+    border-radius: $border-radius-full;
+    font-weight: $font-weight-bold;
+    text-decoration: none;
+    @include transition(all, $transition-normal);
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+  }
+}

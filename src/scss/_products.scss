@@ -1,0 +1,124 @@
+// ==========================================
+// PRODUCTS SECTION
+// ==========================================
+
+.products {
+  padding: $spacing-3xl $spacing-lg;
+  background-color: $color-light;
+
+  @include media-tablet {
+    padding: $spacing-2xl $spacing-lg;
+  }
+
+  &__header {
+    text-align: center;
+    margin-bottom: $spacing-2xl;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__title {
+    margin-bottom: $spacing-md;
+    color: $color-gray;
+  }
+
+  &__subtitle {
+    color: $color-gray-light;
+    font-size: $font-size-lg;
+    margin-top: $spacing-md;
+  }
+
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: $spacing-lg;
+  }
+}
+
+// Product Card
+.product-card {
+  background: linear-gradient(180deg, $color-light 0%, $color-bg-light 100%);
+  border: 1px solid $color-gray-lightest;
+  border-radius: $border-radius-lg;
+  overflow: hidden;
+  box-shadow: $shadow-sm;
+  @include transition(all, $transition-normal);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: $shadow-md;
+  }
+
+  &__figure {
+    margin: 0;
+    overflow: hidden;
+    background: $color-gray-lightest;
+    aspect-ratio: 1;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    @include transition(transform, $transition-normal);
+
+    .product-card:hover & {
+      transform: scale(1.05);
+    }
+  }
+
+  &__content {
+    padding: $spacing-lg;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+
+  &__title {
+    font-size: 1.1rem;
+    font-weight: $font-weight-semibold;
+    margin-bottom: $spacing-md;
+    color: $color-gray;
+  }
+
+  &__description {
+    color: $color-gray-light;
+    font-size: $font-size-sm;
+    line-height: 1.6;
+    margin-bottom: $spacing-md;
+    flex: 1;
+  }
+
+  &__price {
+    font-size: 1.25rem;
+    font-weight: $font-weight-bold;
+    color: $color-primary;
+    margin-bottom: $spacing-lg;
+  }
+
+  &__btn {
+    @include gradient-primary;
+    color: $color-light;
+    border: none;
+    padding: $spacing-md $spacing-lg;
+    border-radius: $border-radius-sm;
+    font-weight: $font-weight-semibold;
+    cursor: pointer;
+    @include transition(all, $transition-normal);
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba($color-secondary, 0.3);
+    }
+
+    &:active {
+      transform: translateY(0);
+    }
+  }
+}

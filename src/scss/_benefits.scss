@@ -1,0 +1,47 @@
+// ==========================================
+// BENEFITS SECTION
+// ==========================================
+
+.benefits {
+  padding: $spacing-2xl $spacing-lg;
+  background-color: $color-light;
+
+  @include media-tablet {
+    padding: $spacing-xl $spacing-lg;
+  }
+
+  &__container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: $spacing-lg;
+    margin-top: $spacing-lg;
+  }
+
+  &__card {
+    background: linear-gradient(180deg, $color-light 0%, $color-bg-light 100%);
+    border-radius: $border-radius-lg;
+    padding: $spacing-lg;
+    box-shadow: $shadow-sm;
+    text-align: center;
+    @include transition(all, $transition-normal);
+
+    &:hover {
+      transform: translateY(-6px);
+      box-shadow: $shadow-md;
+    }
+  }
+
+  &__card-title {
+    margin-bottom: $spacing-md;
+    color: $color-primary;
+    font-size: 1.25rem;
+  }
+
+  &__card-text {
+    color: $color-gray-light;
+    font-size: $font-size-sm;
+    line-height: 1.6;
+  }
+}

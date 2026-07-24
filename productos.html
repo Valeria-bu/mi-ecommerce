@@ -1,96 +1,223 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Productos</title>
+
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/productos.css">
 </head>
+
 <body>
-    <header>
-        <button id="menuBtn" class="menu-toggle" aria-label="Abrir menú">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-        <div class="logo">
-            <h1>Tienda Online</h1>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="productos.html">Productos</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-        </nav>
-        <div class="cart-icon-container">
-            <button id="cartBtn" class="cart-icon" aria-label="Ver carrito">
-                🛒
-                <span id="cart-count" class="cart-badge">0</span>
-            </button>
-        </div>
-    </header>
 
-    <!-- Menú Lateral -->
-    <aside id="sideMenu" class="side-menu">
-        <button id="closeMenu" class="close-btn" aria-label="Cerrar menú">✕</button>
-        <nav class="side-nav">
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="productos.html">Productos</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-        </nav>
-    </aside>
+<header>
 
-    <!-- Modal del Carrito -->
-    <div id="cartModal" class="cart-modal">
-        <div class="cart-modal-content">
-            <button class="cart-modal-close">&times;</button>
-            <h2>Carrito de Compras</h2>
-            <div id="cartItems" class="cart-items"></div>
-            <div id="cartEmpty" class="cart-empty">El carrito está vacío</div>
-            <div id="cartTotal" class="cart-total">
-                <strong>Total: $0.00</strong>
-            </div>
-            <button id="clearCartBtn" class="btn-clear-cart">Vaciar Carrito</button>
-        </div>
+    <button id="menuBtn" class="menu-toggle" aria-label="Abrir menú">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <div class="logo">
+        <h1>Tienda Online</h1>
     </div>
 
-    <main>
-        <section class="productos">
-            <h2>Catálogo de Productos</h2>
-            <p>Explora nuestra selección favorita de belleza y cuidado personal.</p>
-            <div class="lista-productos">
-                <article class="producto">
-                    <img src="img/base liquida.png" alt="Base Líquida">
-                    <h3>Base Líquida</h3>
-                    <p>Acabado natural y cobertura suave para un look impecable todo el día.</p>
-                    <h4>$28.99</h4>
-                    <button class="add-cart">Agregar al carrito</button>
-                </article>
-                <article class="producto">
-                    <img src="img/10160638-Essenziale Nude.jpg" alt="Labial Mate">
-                    <h3>Labial Mate</h3>
-                    <p>Color intenso y larga duración con un acabado elegante y sofisticado.</p>
-                    <h4>$15.99</h4>
-                    <button class="add-cart">Agregar al carrito</button>
-                </article>
-                <article class="producto">
-                    <img src="img/crema facial.webp" alt="Crema Facial">
-                    <h3>Crema Facial</h3>
-                    <p>Hidratación profunda y piel luminosa con una fórmula nutritiva.</p>
-                    <h4>$32.50</h4>
-                    <button class="add-cart">Agregar al carrito</button>
-                </article>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2026 Tienda Online. Todos los derechos reservados.</p>
-        <a id="contacto">Contáctanos</a>
-    </footer>
-    <script src="JavaScript/scripts.js"></script>
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="productos.html">Productos</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <div class="cart-icon-container">
+        <button id="cartBtn" class="cart-icon" aria-label="Ver carrito">
+            🛒
+            <span id="cart-count" class="cart-badge">0</span>
+        </button>
+    </div>
+
+</header>
+
+
+<!-- Menú lateral -->
+
+<aside id="sideMenu" class="side-menu">
+
+    <button id="closeMenu" class="close-btn">
+        ✕
+    </button>
+
+    <nav class="side-nav">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="productos.html">Productos</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
+</aside>
+
+
+<!-- Modal del carrito -->
+
+<div id="cartModal" class="cart-modal">
+
+    <div class="cart-modal-content">
+
+        <button class="cart-modal-close">
+            &times;
+        </button>
+
+        <h2>Carrito de Compras</h2>
+
+        <div id="cartItems" class="cart-items"></div>
+
+        <div id="cartEmpty" class="cart-empty">
+            El carrito está vacío
+        </div>
+
+        <div id="cartTotal" class="cart-total">
+            <strong>Total: $0.00</strong>
+        </div>
+
+        <button id="clearCartBtn" class="btn-clear-cart">
+            Vaciar Carrito
+        </button>
+
+    </div>
+
+</div>
+
+
+
+<main>
+
+<section class="productos">
+
+    <h2>Catálogo de Productos</h2>
+
+    <p>
+        Explora nuestra selección favorita de belleza y cuidado personal.
+    </p>
+
+
+    <div class="lista-productos">
+
+
+        <!-- Base Líquida -->
+
+        <article class="producto">
+
+            <img src="img/base liquida.png" alt="Base Líquida">
+
+            <h3>Base Líquida</h3>
+
+            <p>
+                Acabado natural y cobertura suave para un look impecable todo el día.
+            </p>
+
+            <h4>$28.99</h4>
+
+            <button class="add-cart">
+                Agregar al carrito
+            </button>
+
+        </article>
+
+
+
+        <!-- Sérum Facial -->
+
+        <article class="producto">
+
+            <img src="img/Serum facial.jpg" alt="Sérum Facial">
+
+            <h3>Sérum Facial</h3>
+
+            <p>
+                Tratamiento hidratante con vitaminas que ayuda a mejorar la apariencia de la piel.
+            </p>
+
+            <h4>$380 MXN</h4>
+
+            <button class="add-cart">
+                Agregar al carrito
+            </button>
+
+        </article>
+
+
+
+        <!-- Labial Mate -->
+
+        <article class="producto">
+
+            <img src="img/10160638-Essenziale Nude.jpg" alt="Labial Mate">
+
+            <h3>Labial Mate</h3>
+
+            <p>
+                Color intenso y larga duración con un acabado elegante y sofisticado.
+            </p>
+
+            <h4>$15.99</h4>
+
+            <button class="add-cart">
+                Agregar al carrito
+            </button>
+
+        </article>
+
+
+
+        <!-- Crema Facial -->
+
+        <article class="producto">
+
+            <img src="img/crema facial.webp" alt="Crema Facial">
+
+            <h3>Crema Facial</h3>
+
+            <p>
+                Hidratación profunda y piel luminosa con una fórmula nutritiva.
+            </p>
+
+            <h4>$32.50</h4>
+
+            <button class="add-cart">
+                Agregar al carrito
+            </button>
+
+        </article>
+
+
+    </div>
+
+</section>
+
+</main>
+
+
+
+<footer>
+
+    <p>
+        &copy; 2026 Tienda Online. Todos los derechos reservados.
+    </p>
+
+    <a id="contacto">
+        Contáctanos
+    </a>
+
+</footer>
+
+
+
+<script src="JavaScript/scripts.js"></script>
+
 </body>
+
 </html>
